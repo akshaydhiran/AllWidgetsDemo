@@ -11,11 +11,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 Button a1,a2,a3,a4,a5;
 private void init()
 {
-    a1 = findViewById(R.id.a1);
-    a2 = findViewById(R.id.a2);
-    a3 = findViewById(R.id.a3);
-    a4 = findViewById(R.id.a4);
-    a5 = findViewById(R.id.a5);
+    a1 = findViewById(R.id.a1); // initialise a1
+    a2 = findViewById(R.id.a2); // initialise a2
+    a3 = findViewById(R.id.a3); //initialise a3
+    a4 = findViewById(R.id.a4); // initialise a4
+    a5 = findViewById(R.id.a5);  // initialise a5
     a1.setOnClickListener(this);
     a2.setOnClickListener(this);
     a3.setOnClickListener(this);
@@ -26,10 +26,7 @@ private void init()
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-init();
-
-
-
+        init();
     }
 
     @Override
@@ -39,9 +36,13 @@ init();
         Intent intent = null; // intent is used to show messages.
         switch (id){  // here we use switch for giving id for multiple butttons we used for to distinguish.
             case R.id.a1 : intent = new Intent(MainActivity.this, ToastActivity.class); break;
+            case R.id.a2 : intent = new Intent(MainActivity.this, ButtonActivity.class); break;
+            case R.id.a3 : intent = new Intent(MainActivity.this, FormActivity.class); break;
 
         }
         if (intent!=null)
         startActivity(intent);  // here we use startACtivity for using other buttons because it is crash instead.
     }
 }
+// Custom Radio Button
+   //  Dynamic Radio Button
